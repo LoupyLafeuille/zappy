@@ -1,0 +1,21 @@
+{
+      "nodes":[
+	  {"name":"isEnoughFood?","question":"isEnoughFood?","decision":"NULL","left":"Look?","right":"Incant?"},
+	  {"name":"Look?","question":"Look?","decision":"NULL", "left":"Look","right":"weWantIt?"},
+	  {"name":"Look","question":"NULL","decision":"Look","left":"NULL","right":"NULL"},
+	  {"name":"weWantIt?","question":"weWantIt?","decision":"NULL", "left":"4?","right":"Anyone?"},
+	  {"name":"Anyone?","question":"Anyone?","decision":"NULL", "left":"Pick","right":"Kick"},
+	  {"name":"Kick","question":"NULL","decision":"Kick", "left":"NULL","right":"NULL"},
+	  {"name":"Pick","question":"NULL","decision":"Pick", "left":"NULL","right":"NULL"},
+	  {"name":"4?","question":"4?","decision":"NULL", "left":"TurnRight","right":"Walk"},
+	  {"name":"TurnRight","question":"NULL","decision":"TurnRight", "left":"NULL","right":"NULL"},
+	  {"name":"Walk","question":"NULL","decision":"Walk", "left":"NULL","right":"NULL"},
+	  {"name":"Evolve?","question":"Evolve?","decision":"NULL", "left":"Look?","right":"EnoughTeamNbr?"},
+	  {"name":"EnoughTeamNbr?","question":"EnoughTeamNbr?","decision":"NULL", "left":"EnoughMaxTeamNbr","right":"AnyoneEvolve?"},
+	  {"name":"EnoughMaxTeamNbr?","question":"EnoughMaxTeamNbr?","decision":"NULL", "left":"AnyoneEvolve","right":"Fork"},
+	  {"name":"Fork","question":"NULL","decision":"Fork", "left":"NULL","right":"NULL"},
+	  {"name":"AnyoneEvolve?","question":"AnyoneEvolve?","decision":"NULL", "left":"Evolve","right":"Join"},
+	  {"name":"Evolve","question":"NULL","decision":"Evolve", "left":"NULL","right":"NULL"},
+	  {"name":"Join","question":"NULL","decision":"Join", "left":"NULL","right":"NULL"}
+      ]
+}

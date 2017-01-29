@@ -1,0 +1,83 @@
+==25627== Invalid read of size 4
+==25627==    at 0x403674: write_message (see_cmd.c:42)
+==25627==    by 0x403ADD: what_in_case (see_cmd.c:82)
+==25627==    by 0x403BA0: search_item (see_cmd.c:107)
+==25627==    by 0x403C95: voir_cmd (see_cmd.c:125)
+==25627==    by 0x40494B: process_request (request_handler.c:72)
+==25627==    by 0x404B7A: client_handler (request_handler.c:102)
+==25627==    by 0x402728: handle_request (handle_client.c:47)
+==25627==    by 0x402BFC: handle_clients (handle_client.c:121)
+==25627==    by 0x401F05: main (main.c:85)
+==25627==  Address 0xc8c0958 is 24 bytes after a block of size 32 in arena "client"
+==25627==
+==25627== Invalid read of size 4
+==25627==    at 0x4036C9: write_message (see_cmd.c:44)
+==25627==    by 0x403ADD: what_in_case (see_cmd.c:82)
+==25627==    by 0x403BA0: search_item (see_cmd.c:107)
+==25627==    by 0x403C95: voir_cmd (see_cmd.c:125)
+==25627==    by 0x40494B: process_request (request_handler.c:72)
+==25627==    by 0x404B7A: client_handler (request_handler.c:102)
+==25627==    by 0x402728: handle_request (handle_client.c:47)
+==25627==    by 0x402BFC: handle_clients (handle_client.c:121)
+==25627==    by 0x401F05: main (main.c:85)
+==25627==  Address 0xc8c0958 is 24 bytes after a block of size 32 in arena "client"
+==25627==
+==25627== Invalid read of size 4
+==25627==    at 0x4037AA: write_message (see_cmd.c:46)
+==25627==    by 0x403ADD: what_in_case (see_cmd.c:82)
+==25627==    by 0x403BA0: search_item (see_cmd.c:107)
+==25627==    by 0x403C95: voir_cmd (see_cmd.c:125)
+==25627==    by 0x40494B: process_request (request_handler.c:72)
+==25627==    by 0x404B7A: client_handler (request_handler.c:102)
+==25627==    by 0x402728: handle_request (handle_client.c:47)
+==25627==    by 0x402BFC: handle_clients (handle_client.c:121)
+==25627==    by 0x401F05: main (main.c:85)
+==25627==  Address 0xc8c0958 is 24 bytes after a block of size 32 in arena "client"
+==25627==
+==25627== Invalid read of size 8
+==25627==    at 0x40355C: check_person (see_cmd.c:21)
+==25627==    by 0x4037DA: write_message (see_cmd.c:57)
+==25627==    by 0x403ADD: what_in_case (see_cmd.c:82)
+==25627==    by 0x403BA0: search_item (see_cmd.c:107)
+==25627==    by 0x403C95: voir_cmd (see_cmd.c:125)
+==25627==    by 0x40494B: process_request (request_handler.c:72)
+==25627==    by 0x404B7A: client_handler (request_handler.c:102)
+==25627==    by 0x402728: handle_request (handle_client.c:47)
+==25627==    by 0x402BFC: handle_clients (handle_client.c:121)
+==25627==    by 0x401F05: main (main.c:85)
+==25627==  Address 0xc8c0950 is 16 bytes after a block of size 32 in arena "client"
+==25627==
+==25627== Invalid read of size 8
+==25627==    at 0x407D43: len_dllc (dllc2.c:46)
+==25627==    by 0x403566: check_person (see_cmd.c:21)
+==25627==    by 0x4037DA: write_message (see_cmd.c:57)
+==25627==    by 0x403ADD: what_in_case (see_cmd.c:82)
+==25627==    by 0x403BA0: search_item (see_cmd.c:107)
+==25627==    by 0x403C95: voir_cmd (see_cmd.c:125)
+==25627==    by 0x40494B: process_request (request_handler.c:72)
+==25627==    by 0x404B7A: client_handler (request_handler.c:102)
+==25627==    by 0x402728: handle_request (handle_client.c:47)
+==25627==    by 0x402BFC: handle_clients (handle_client.c:121)
+==25627==    by 0x401F05: main (main.c:85)
+==25627==  Address 0x8 is not stack'd, malloc'd or (recently) free'd
+==25627==
+[xcb] Unknown sequence number while processing queue
+[xcb] Most likely this is a multi-threaded client and XInitThreads has not been called
+[xcb] Aborting, sorry about that.
+zappy_server: ../../src/xcb_io.c:274: poll_for_event: Assertion `!xcb_xlib_threads_sequence_lost' failed.
+==25627==
+==25627== HEAP SUMMARY:
+==25627==     in use at exit: 2,180,555 bytes in 10,712 blocks
+==25627==   total heap usage: 292,656 allocs, 281,944 frees, 230,842,631 bytes allocated
+==25627==
+==25627== LEAK SUMMARY:
+==25627==    definitely lost: 43,475 bytes in 8,686 blocks
+==25627==    indirectly lost: 176 bytes in 4 blocks
+==25627==      possibly lost: 304 bytes in 1 blocks
+==25627==    still reachable: 2,136,600 bytes in 2,021 blocks
+==25627==         suppressed: 0 bytes in 0 blocks
+==25627== Rerun with --leak-check=full to see details of leaked memory
+==25627==
+==25627== For counts of detected and suppressed errors, rerun with: -v
+==25627== ERROR SUMMARY: 375 errors from 7 contexts (suppressed: 0 from 0)
+[2]    25627 killed     valgrind ./zappy_server -x 4 -y 4 -c 5 -t 10 -n j1 j2 -p 4243

@@ -1,0 +1,27 @@
+* generer la map (taille en parametre) ==========================> LP ok
+* select ===============> LOIK ok
+* Tableau de pointeur sur fonction pour le protocol (ia) ==========> CLAIRE ok
+* Parsing buffeur circulaire ========> LOIK ok
+* implementer fonctions tableau de pointeur sur fonction ====================> 3
+* fonction pour free les vars de t_params ========> LP ok
+* valeur par defaut dans un define =============> LP ok
+* pas de valuer par default pour les names et nb clients ==================> LP ok
+* Thread pour l'affichage =====> LOIK ok
+* queue de 10 requete max =====> LOIK ======> ok
+* structure draw_map ====> SYL ===> ok
+* connection ===> LOIK ===> ok
+* gestion des equipes ====> LOIK ===> ok
+* timer ====> LOIK ====> ok
+* deces des client ===> LOIK ====> ok
+* monitorer uniuquement les socket avec quelque chose a ecrire ====> ok
+* condition d'arret ===> ok
+* gestion des args ==> ok
+* free persons ====> ok
+* check que dans param les parametres sont bons,cad : x et y > 0 , nb Client = nb NOM, port > 1024, delai > 0 :) =======> Claire ===> ok
+* afficher USAGE ============> Claire ===> ok
+* strncmp manque la derniere lettre ====> ok
+* cleanup uselles malloc and strtok ===> ok
+* optimisation gestion des requetes ===> ok
+
+* checker les fuites de memoires
+* les broadcast sur differents pers

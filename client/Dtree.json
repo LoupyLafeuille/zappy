@@ -1,0 +1,25 @@
+{
+    "nodes":[
+	{"name":"Look?","question":"Look?","decision":"NULL", "left":"Look","right":"isEnoughFood?"},
+	{"name":"Look","question":"NULL","decision":"Look","left":"NULL","right":"NULL"},
+	{"name":"isEnoughFood?","question":"isEnoughFood?","decision":"NULL","left":"Food?","right":"NeedMe?"},
+	{"name":"Food?","question":"Food?","decision":"NULL", "left":"Walk","right":"PickFood"},
+	{"name":"PickFood","question":"NULL","decision":"PickFood", "left":"NULL","right":"NULL"},
+	{"name":"Walk","question":"NULL","decision":"Walk", "left":"NULL","right":"NULL"},
+	{"name":"EnoughRessources?","question":"EnoughRessources?","decision":"NULL", "left":"PickRessources?","right":"PerfectRessourcesNbr?"},
+	{"name":"PickRessources?","question":"PickRessources?","decision":"NULL", "left":"SearchForRessources","right":"Pick"},
+	{"name":"PerfectRessourcesNbr?","question":"PerfectRessourcesNbr?","decision":"NULL", "left":"Adjust","right":"EnoughPlayerNbr?"},
+	{"name":"SearchForRessources","question":"NULL","decision":"SearchForRessources", "left":"NULL","right":"NULL"},
+	{"name":"Adjust","question":"NULL","decision":"Adjust", "left":"NULL","right":"NULL"},
+	{"name":"EnoughPlayerNbr?","question":"EnoughPlayerNbr?","decision":"NULL", "left":"Call","right":"TooMuchPlayerNbr?"},
+	{"name":"TooMuchPlayerNbr?","question":"TooMuchPlayerNbr?","decision":"NULL", "left":"Evolve","right":"Kick"},
+	{"name":"Call","question":"NULL","decision":"Call", "left":"NULL","right":"NULL"},
+	{"name":"Pick","question":"NULL","decision":"Pick", "left":"NULL","right":"NULL"},
+	{"name":"Kick","question":"NULL","decision":"Kick", "left":"NULL","right":"NULL"},
+	{"name":"Fork","question":"NULL","decision":"Fork", "left":"NULL","right":"NULL"},
+	{"name":"Evolve","question":"NULL","decision":"Evolve", "left":"NULL","right":"NULL"},
+	{"name":"NeedMe?","question":"NeedMe?","decision":"NULL", "left":"EnoughRessources?","right":"Join"},
+	{"name":"Join","question":"NULL","decision":"Join", "left":"NULL","right":"NULL"}
+
+    ]
+}

@@ -1,0 +1,39 @@
+#!/bin/bash
+#
+# Slack (slack.com) notification post-receive hook.
+#
+# Based on: https://github.com/joemiller/git-hooks Campfire notification post-receive hook. Author: Joe Miller
+# (http://joemiller.me)
+#
+# Based on post-receive.irc by Mikael Fridh <frimik@gmail.com> https://gist.github.com/1821358
+#
+# Settings needed:
+#  git config hooks.slack.webhook-url "https://hooks.slack.com/services/..."
+#  git config hooks.slack.channel "general"
+#
+# - The Slack webhook URL can be found in:
+#   https://my.slack.com/services/new/incoming-webhook
+#
+
+# MAIN PROGRAM
+# Read all refs from stdin, notify slack for each
+
+  msg=$(git log -1 HEAD)
+
+  webhook_url=$(git config --get hooks.slack.webhook-url)
+
+  if [ -z "$webhook_url" ]; then
+    echo "ERROR: config settings not found"
+    exit 1
+  fi
+
+  payload="{\"text\": \"Commit on Zappy\n>>>${msg}\""
+
+  payload="$payload}"
+
+  curl -s \
+      -d "payload=$payload" \
+      "$webhook_url" \
+      >/dev/null
+
+exit 0

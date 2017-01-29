@@ -1,0 +1,3 @@
+sudo apt-get install curl
+git config hooks.slack.webhook-url 'https://hooks.slack.com/services/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'
+cp ./post-commit ../.git/hooks
